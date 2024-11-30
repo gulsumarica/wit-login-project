@@ -19,6 +19,7 @@ describe("errors", () => {
       "contain",
       "Adınızı en az 3 karakter giriniz"
     );
+    cy.get(`[data-cy="submit-button"]`).should("not.be.disable");
   });
   it("the wrong lastname", () => {
     cy.visit("http://localhost:5174/");
