@@ -1,5 +1,3 @@
-import { errorMessages } from "../../src/components/Login";
-
 describe("submit when the successful form is filled out", () => {
   it("i can open the success page", () => {
     cy.visit("http://localhost:5174/");
