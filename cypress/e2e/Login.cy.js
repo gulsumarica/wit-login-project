@@ -28,6 +28,7 @@ describe("errors", () => {
       "contain",
       "Soyadınızı en az 3 karakter giriniz"
     );
+    cy.get(`[data-cy="submit-button"]`).should("not.be.disable");
   });
   it("the wrong lastname", () => {
     cy.visit("http://localhost:5174/");
@@ -36,6 +37,7 @@ describe("errors", () => {
       "contain",
       "Geçerli bir email giriniz"
     );
+    cy.get(`[data-cy="submit-button"]`).should("not.be.disable");
   });
   it("the wrong password", () => {
     cy.visit("http://localhost:5174/");
@@ -44,5 +46,6 @@ describe("errors", () => {
       "contain",
       "En az 8 karakter, en az 1 büyük harf, en az 1 küçük harf, en az 1 sembol ve en az 1 rakam içermelidir"
     );
+    cy.get(`[data-cy="submit-button"]`).should("not.be.disable");
   });
 });
